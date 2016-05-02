@@ -11,6 +11,8 @@
     <packaging>jar</packaging>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <source.version>1.6</source.version>
         <target.version>1.6</target.version>
         <encoding>UTF-8</encoding>
@@ -113,7 +115,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.14.1</version>
                 <configuration>
-                    <argLine>${argLine} -Dfile.encoding=UTF-8</argLine>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
