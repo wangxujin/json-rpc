@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="bookServiceProxy" class="com.felix.unbiz.json.rpc.client.ProxyFactoryBean">
+        <property name="serviceInterface">
+            <value>com.felix.unbiz.json.rpc.service.BookService</value>
+        </property>
+        <property name="serviceUrl" value="${BOOK_SERVICE_URL}"/>
+        <property name="servers" value="${BOOK_SERVER}"/>
+        <property name="protocol">
+            <value type="com.felix.unbiz.json.rpc.protocol.JsonProtocol">GSON</value>
+        </property>
+    </bean>
+
+
+    <bean id="heyServiceProxy" class="com.felix.unbiz.json.rpc.client.ProxyFactoryBean">
+        <property name="serviceInterface">
+            <value>com.felix.unbiz.json.rpc.service.HeyService</value>
+        </property>
+        <property name="serviceUrl" value="${HEY_SERVICE_URL}"/>
+        <property name="servers" value="${HEY_SERVER}"/>
+    </bean>
+
+    <bean id="heyServiceProxy1" class="com.felix.unbiz.json.rpc.client.ProxyFactoryBean">
+        <property name="serviceInterface">
+            <value>com.felix.unbiz.json.rpc.client.HeyServiceProxy</value>
+        </property>
+        <property name="serviceUrl" value="${HEY_SERVICE_URL}"/>
+        <property name="servers" value="${HEY_SERVER}"/>
+        <property name="hasHeaders" value="true"></property>
+    </bean>
+
+    <bean id="studentServiceProxy" class="com.felix.unbiz.json.rpc.client.ProxyFactoryBean">
+        <property name="serviceInterface">
+            <value>com.felix.unbiz.json.rpc.service.StudentService</value>
+        </property>
+        <property name="serviceUrl" value="${STUDENT_SERVICE_URL}"/>
+        <property name="servers" value="${STUDENT_SERVER}"/>
+    </bean>
+
+</beans>
