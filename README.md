@@ -1,4 +1,4 @@
-# json-rpc
+# json-rpc [![Build Status](https://travis-ci.org/wangxujin/json-rpc.svg?branch=master)](https://travis-ci.org/wangxujin/json-rpc)  [![Coverage Status](https://coveralls.io/repos/github/wangxujin/json-rpc/badge.svg?branch=master)](https://coveralls.io/github/wangxujin/json-rpc?branch=master)
 
 json-rpc是一种无状态的，轻量级的远程过程调用（RPC）协议，在GSON协议之上增加Spring容器集成、负载均衡、容错处理、注解服务发现等特性。
 
